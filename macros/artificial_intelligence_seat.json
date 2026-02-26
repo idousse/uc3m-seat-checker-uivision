@@ -37,7 +37,7 @@
     {
       "Command": "type",
       "Target": "id=_asignatura",
-      "Value": "${courseCode}",
+      "Value": "18268",
       "Targets": [
         "id=_asignatura",
         "name=_asignatura",
