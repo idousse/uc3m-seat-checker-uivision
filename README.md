@@ -89,3 +89,6 @@ If SIGMA changes layout, update the XPath to match the seat column of the first 
       - **Stop the macro**
    7. Wait 1 second
    8. Repeat
+
+## License
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details
