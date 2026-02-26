@@ -1,0 +1,189 @@
+{
+  "Name": "artificial intelligence seat",
+  "CreationDate": "2026-02-26",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "oldSeats",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "loopStart",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://sigma.uc3m.es/prema/control/modificarSolicitud",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=_asignatura",
+      "Value": "",
+      "Targets": [
+        "id=_asignatura",
+        "name=_asignatura",
+        "xpath=//*[@id=\"_asignatura\"]",
+        "xpath=//input[@id='_asignatura']",
+        "xpath=//td[2]/input",
+        "css=#_asignatura"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=_asignatura",
+      "Value": "${courseCode}",
+      "Targets": [
+        "id=_asignatura",
+        "name=_asignatura",
+        "xpath=//*[@id=\"_asignatura\"]",
+        "xpath=//input[@id='_asignatura']",
+        "xpath=//td[2]/input",
+        "css=#_asignatura"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "xpath=//*[@id=\"aplZonaEdicion\"]/form/fieldset[2]/div/a/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"aplZonaEdicion\"]/form/fieldset[2]/div/a/span",
+        "xpath=//fieldset[2]/div/a/span",
+        "css=#aplZonaEdicion > form > fieldset:nth-child(5) > div > a:nth-child(1) > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"taulaAsigsOferta\"]/tbody/tr[1]/td[10]",
+      "Value": "seats",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Current seats: ${seats}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${seats} != ${oldSeats}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🔥 SEATS CHANGED from ${oldSeats} to ${seats}",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript",
+      "Target": "new Audio('https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg').play();",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${seats}",
+      "Value": "oldSeats",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": " ${seats} > 0",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "🔥 Seat available – enrolling...",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id='taulaAsigsOferta']/tbody/tr[1]/td[1]",
+      "Value": "",
+      "Description": "+ button to show course description"
+    },
+    {
+      "Command": "pause",
+      "Target": "800",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id='1']/td[2]/table[2]/tbody/tr[1]/td[1]/span/a/span",
+      "Value": "",
+      "Description": "+ button to add course"
+    },
+    {
+      "Command": "pause",
+      "Target": "800",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id='aplZonaEdicion']/form/fieldset[1]/div[2]/a/span",
+      "Value": "",
+      "Description": "Confirm button"
+    },
+    {
+      "Command": "executeScript",
+      "Target": "new Audio('https://actions.google.com/sounds/v1/cartoon/pop.ogg').play();",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript",
+      "Target": "alert('🔥 SEAT CAPTURED! Check SIGMA.');",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "throwError",
+      "Target": "Seat captured – stopping macro.",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "loopStart",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}
